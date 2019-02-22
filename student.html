@@ -1,0 +1,704 @@
+<!doctype html>
+<html>
+<head>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+
+
+
+
+
+    
+
+
+
+          <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+          <script type="text/javascript">
+            google.charts.load('current', {'packages':['corechart']});
+            google.charts.setOnLoadCallback(drawChart);
+      
+            function drawChart() {
+      
+              var data = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['Work',     11],
+                ['Eat',      2],
+                ['Commute',  2],
+                ['Watch TV', 2],
+                ['Sleep',    7]
+              ]);
+      
+              var options = {
+                title: 'My Daily Activities'
+              };
+      
+              var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+      
+              chart.draw(data, options);
+            }
+          </script>
+       
+        
+          
+ 
+      
+
+
+
+
+
+
+
+
+
+     
+   
+       
+          <script type="text/javascript">
+            google.charts.load("current", {packages:["calendar"]});
+            google.charts.setOnLoadCallback(drawChart);
+      
+         function drawChart() {
+             var dataTable = new google.visualization.DataTable();
+             dataTable.addColumn({ type: 'date', id: 'Date' });
+             dataTable.addColumn({ type: 'number', id: 'Won/Loss' });
+             dataTable.addRows([
+                [ new Date(2012, 3, 13), 37032 ],
+                [ new Date(2012, 3, 14), 38024 ],
+                [ new Date(2012, 3, 15), 38024 ],
+                [ new Date(2012, 3, 16), 38108 ],
+                [ new Date(2012, 3, 17), 38229 ],
+                // Many rows omitted for brevity.
+                [ new Date(2013, 9, 4), 38177 ],
+                [ new Date(2013, 9, 5), 38705 ],
+                [ new Date(2013, 9, 12), 38210 ],
+                [ new Date(2013, 9, 13), 38029 ],
+                [ new Date(2013, 9, 19), 38823 ],
+                [ new Date(2013, 9, 23), 38345 ],
+                [ new Date(2013, 9, 24), 38436 ],
+                [ new Date(2013, 9, 30), 38447 ]
+              ]);
+      
+             var chart = new google.visualization.Calendar(document.getElementById('calendar_basic'));
+      
+             var options = {
+    title: 'student Attendance',
+    height: 350,
+    calendar: {
+      monthLabel: {
+        fontName: 'Times-Roman',
+        fontSize: 12,
+        color: '#981b48',
+        bold: true,
+        italic: true
+      },
+      monthOutlineColor: {
+        stroke: '#981b48',
+        strokeOpacity: 0.8,
+        strokeWidth: 2
+      },
+      unusedMonthOutlineColor: {
+        stroke: '#bc5679',
+        strokeOpacity: 0.8,
+        strokeWidth: 1
+      },
+      underMonthSpace: 16,
+    }
+  };
+
+
+
+
+
+             chart.draw(dataTable, options);
+         }
+          </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section>
+<input type="radio" id="profile" value="1" name="tractor" checked='checked' />    
+<input type="radio" id="settings" value="2" name="tractor" />      
+<input type="radio" id="posts" value="3" name="tractor" />
+<input type="radio" id="books" value="4" name="tractor" />
+  
+  <nav>
+  <label for="settings" class='fa fa-cogs'>analytic</label>
+  <label for="posts" class='fa fa-folder-open'>Attendance</label>
+  <label for="books" class='fa fa-book'>project card</label>   
+  <label for="profile" class='fa fa-user'>Profile</label>
+  </nav>
+  
+  <article class='uno fa fa-umbrella'>
+    <h2>
+      <img alt=''  src='https://avatars1.githubusercontent.com/u/37480057?s=460&v=4' />
+      Vishal sharma
+      <span>student interface</span></h2>
+   <footer>
+    <ul>
+      <li class='fa fa-hand-o-right'></li>
+      <li class='fa fa-beer'></li>
+      <li class='fa fa-coffee'></li>
+      <li class='fa fa-hand-o-left'></li>
+    </ul>
+   </footer>
+  </article>
+  
+  <article class='dos fa fa-wrench'>
+    <p>analytic here it is done with google api but can also be done by d3 also</p>
+    <div id="piechart" style="width: 100%; height: 80%;"></div>
+  </article>
+  
+  <article class='tres fa fa-sitemap'>
+    <ol>
+      <!-- <li>Dimensionado de imágenes y objetos en CSS</li>
+      <li>Evita pulsaciones no deseadas al hacer scroll</li>
+      <li>¿Qué es CSS?</li>
+      <li>CSS Style Attributes. La especificación</li>
+      <li>Múltiples labels por cada input </li>
+      <li>Sintaxis de Css y Glosario de términos</li> -->
+
+
+      <li>Student’s profile (Name, DOB, Class, Coaching, Contacts etc.)</li>
+      <li>Enrolled Program with plans</li> 
+      <li>No. of classes done so far with date etc.</li>
+      <div id="calendar_basic" style="width: 100%; height: 100%;"></div>
+      <li>Marks in taken tests of above mentioned patterns</li>
+      <li>Teachers remark</li> 
+
+
+
+    </ol>
+  </article>
+  
+  <article class='cuatro fa fa-copy'>
+    <!-- <dl>
+      <dt>Guía de Transiciones Css</dt>
+      <dd>Todas y cada una de las propiedades css que componen el grupo de las transitions con demos.</dd>
+      <dt>@Font-face y sus problemas</dt>
+      <dd>Los problemas más comunes y sus soluciones, que suelen presentarse al utilizar la regla @font-face de Css para mostrar los textos en tipografías distintas a las safety fonts.</dd>
+    </dl> -->
+<!-- 
+    <div id="container">
+      <div class="image" style="background-image: url(https://25.media.tumblr.com/f9cd81645ebd2f0904227b42784bbfae/tumblr_mj6r7nBfdV1s7aky5o2_r1_1280.jpg)"></div>
+      <div class="info">
+        <h1 class="name">panda smith</h1>
+        <h3 class="position"><a href="#">Creative director</a></h3>
+        <p>Large bet on myself in round one pansy i more, but you go</p>
+      </div>
+      <div class="social">
+        <a href=""><i class="icon-twitter"></i></a>
+        
+        <a href=""><i class="icon-linkedin"></i></a>
+        
+        <a href=""><i class="icon-facebook"></i></a>
+        
+        <a href=""><i class="icon-google-plus"></i></a>
+        
+        <a href=""><i class="icon-github-alt"></i></a>
+      </div>
+    </div>  
+
+
+ -->
+
+
+ <div class="kart">
+  <div class="cover"></div>
+  <div class="avatar"></div>
+  <div class="bilgi">
+    <h2>Program plan</h2>
+    <h3>plan</h3>
+  </div>
+  
+  <div class="saat">18:13</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </article>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<style>
+
+
+
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,600);
+
+
+
+
+.kart {
+  
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  
+ 
+  width:70%;
+  height: 120%;
+  background: #f1e9db;
+  border-radius: 10px;
+  
+  
+  box-shadow: 0 0 85px #222;
+   
+  
+  overflow: hidden;
+}
+ .cover {
+    background: url("https://avatars1.githubusercontent.com/u/37480057?s=460&v=4");
+    height: 330px;
+  }
+
+  
+  .bilgi {
+    padding: 20px 30px;
+    height: 100px;
+    margin: 0;
+    position: absolute;
+    left: 125px;
+    top: 315px;
+  
+    
+  }
+    h2 {
+      font-size: 32px;
+      color: #725e5b;
+      font-weight: 300;
+      margin: 0;
+    }
+
+    h3 {
+      color: #b8a47e;
+      margin-top: -2px;
+      font-weight: 300;
+      margin: 0;
+    }
+  
+
+  
+  .avatar {
+    position: absolute;
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    border: 10px solid #725e5b;
+    top: 274px;
+    left: 25px;
+  
+    
+    background: url("https://avatars1.githubusercontent.com/u/37480057?s=460&v=4");
+    background-size: 110% 110%;
+    background-position: center center;
+  
+    
+    box-shadow: 0 1px 2px #000;
+  }
+
+  .saat {
+    position: absolute;
+    top: 15px;
+    left: 18px;
+    
+    background: url("") no-repeat left center;
+    padding-left: 25px;
+    color: #725e5b;
+    font-weight: 600;
+  }
+
+
+
+
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- project card style-->
+<!-- <style>
+
+@import "compass/css3";
+
+@import "compass/utilities/links/unstyled-link";
+body{
+  font-family: 'Raleway', sans-serif;
+  background:url("http://www.wallpapersin.net/wallpapers/2013/03/Tokyo-Skyscrapers-485x728.jpg");
+  
+}
+a{
+  @include unstyled-link();
+  color:#00BBBB;
+  &:hover{
+      color:#666;
+  }
+}
+#container{
+  width:45%;
+  height:75%;
+  @include box-shadow(#999 2px 2px 10px);
+  margin:0px auto;
+}
+.image{
+  height:275px;
+  background: center center no-repeat;
+  background-size:cover;
+}
+.info{
+  height:175px;
+  background:#FAFAFA;
+  text-align:center;
+  h1.name{
+    text-transform:uppercase;
+    margin:0px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: #5C5B5B;
+    font-size: 30px;
+    padding: 25px 0px 0px 0px;
+  }
+  h3.position{
+    margin:0px;
+  }
+  p{
+    color:#666;
+    padding:0px 60px;
+  }
+}
+.social{
+  height:40px;
+  background:#DAE0DE;
+  text-align:center;
+  padding-top:20px;
+  i{
+    font-size:20px;
+  }
+  a{
+    margin:0px 10px;
+    color:#666;
+    &:hover{
+      color:#00BBBB;
+    }
+  }
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ -->
+
+
+
+
+
+
+
+
+
+<style>
+
+@import url(https://fonts.googleapis.com/css?family=Dosis:600,200|Great+Vibes);
+*, *:after, *:before {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+* {margin:0;padding:0;border: 0 none;position: relative;}
+[class="fa"]:before {font-family: 'fontawesome', sans-serif;}
+
+html {
+  background: #f5f5f5;
+  width: 100%;
+  height:60%;
+  font-family: dosis, sans-serif;
+  font-weight: 300;
+  color: #fff;
+}
+
+section {
+  background: rgb(118, 26, 204);
+  width: 80vw;
+  max-width: 40rem;
+  min-width: 390px;
+  height: 24rem;
+  margin: 2rem auto;
+  padding-right: 5rem;
+  box-shadow: 0 0 3px rgba(0,0,0,.4);
+}
+article {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 5rem;
+  overflow: auto;
+  transition: .7s;
+  transform: scale(0);
+  transform-origin: 0% 0%;
+  transition-delay: .1s;
+}
+article:before {
+  color: rgba(40, 173, 167, 0.45);
+  font-size: 4rem;
+  font-weight: 100;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  height: 15rem;
+  text-align: center;
+  color: rgba(0,0,0,.7);
+}
+body > h2 {height: auto;}
+h2 img {
+  width: 120px;
+  height: auto;
+  background: #f9f9f9;
+  border: 5px solid rgba(0,0,0,.5);
+  border-radius: 50%;
+  padding: 5px;
+  display: block;
+  margin: 2rem auto 0;
+  box-shadow: 0 0 7px rgba(0,0,0,.5);
+}
+h2 span {
+  font-family: Great Vibes;
+  font-weight: 400;
+  display: block;
+}
+footer,
+footer ul {
+  width: 100%;
+  color: rgba(0,0,0,.15);
+}
+footer li {
+  list-style-type: none;
+  float: left;
+  width: 25%;
+  text-align: center;  
+}
+footer li::before {
+  display: block;
+  font-size: 4rem;
+  font-weight: 100;
+  line-height: 6.5rem;
+}
+p, dl, ol {
+  margin: 2rem 2rem 1.5rem 5rem;
+  line-height: 1.5;
+  font-size: 1.3rem;
+}
+ol li {margin-bottom: 1rem;}
+dt {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-indent: -1.5rem;
+}
+nav {
+  background: #0D757D;
+  width: 5rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+nav:after {
+  content:'';
+  width: 5rem;
+  height: 6rem;
+  background: #FF7361;
+  position: absolute;
+  left: 0;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  transition: .5s;
+}
+input {
+  display: none;
+}
+label {
+  display: block;
+  width: 100%;
+  height: 6rem;
+  color: #15BFCC;
+  text-align: center;
+  cursor: pointer;
+  border-left: 1px solid #004050;
+  transition: .5s;
+  z-index: 2;
+}
+label:hover {color: rgba(0,0,0,.5);font-weight:600;}
+label:before {
+  display: block;
+  font-size: 3rem;
+  padding-top: .8rem;
+  z-index: 2;
+}
+#profile:checked ~ nav [for='profile'],
+#settings:checked ~ nav [for='settings'],
+#posts:checked ~ nav [for='posts'],
+#books:checked ~ nav [for='books']
+{
+  color: rgba(0,0,0,.5);
+  font-weight: 600;
+  border-left: 1px solid #FF7361;
+}
+#settings:checked ~ nav [for='settings'] {}
+#profile:checked ~ nav [for='profile'] {}
+
+#profile:checked ~ nav:after {
+  top: 18rem;
+  border-top: 1px solid #15BFCC;
+  border-bottom: 0 none;
+}
+#settings:checked ~ nav:after {
+  top:0rem;
+  border-top: 0 none;
+  border-bottom: 1px solid #004050;
+}
+#posts:checked ~ nav:after {
+  top: 6rem;
+  border-top: 1px solid #15BFCC;
+  border-bottom: 1px solid #114ae6;
+}
+#books:checked ~ nav:after {
+  top: 12rem;
+  border-top: 1px solid #15BFCC;
+  border-bottom: 1px solid #114ae6;
+}
+
+#profile:checked ~ .uno,
+#settings:checked ~ .dos,
+#posts:checked ~ .tres,
+#books:checked ~ .cuatro {
+  transform: scale(1);
+  transition-delay: .4s; 
+}
+a {color: rgba(0,0,0,.4)}
+a:hover {color: rgba(0,0,0,.2)}
+
+
+
+
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
