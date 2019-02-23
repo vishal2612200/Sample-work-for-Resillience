@@ -1,0 +1,586 @@
+<!doctype html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section>
+  <h2 class="text-center">Progress Bar</h2><br><br> 
+<div class="container">
+  <div class="row">
+    <div class="col-md-2 col-lg-2"></div>
+     <div class="col-md-8 col-lg-8">
+       
+<div class="barWrapper">
+ <span class="progressText"><B>Science</B></span>
+<div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" >   
+        <span  class="popOver" data-toggle="tooltip" data-placement="top" title="85%"> </span>     
+</div>
+</div>
+
+<div class="barWrapper">
+ <span class="progressText"><B>Math</B></span>
+<div class="progress ">
+  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="10" aria-valuemax="100" style="">
+     <span  class="popOver" data-toggle="tooltip" data-placement="top" title="75%"> </span>  
+  </div>
+  
+</div>
+</div>
+
+<div class="barWrapper">
+ <span class="progressText"><B>Physics</B></span>
+<div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+     <span  class="popOver" data-toggle="tooltip" data-placement="top" title="65%"> </span>  
+  </div>
+</div>
+</div>
+<div class="barWrapper">
+ <span class="progressText"><B>Math</B></span>
+<div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+         <span  class="popOver" data-toggle="tooltip" data-placement="top" title="55%"> </span>  
+  </div>
+</div>
+</div>
+<div class="barWrapper">
+ <span class="progressText"><B>hindi</B></span>
+<div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+      <span  class="popOver" data-toggle="tooltip" data-placement="top" title="70%"> </span>  
+  </div>
+</div>
+</div>
+  <div class="barWrapper">
+ <span class="progressText"><B>English</B></span>
+<div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+      <span  class="popOver" data-toggle="tooltip" data-placement="top" title="75%"> </span> 
+  </div>
+</div>
+</div>
+
+</div>
+     <div class="col-md-2 col-lg-2"></div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<svg id="svg" viewbox="0 0 100 100">
+    <circle cx="50" cy="50" r="45" fill="#FDB900"/>
+    <path fill="none" stroke-linecap="round" stroke-width="5" stroke="#fff"
+          stroke-dasharray="1,250.2"
+          d="M50 10
+             a 40 40 0 0 1 0 80
+             a 40 40 0 0 1 0 -80"/>
+    <text x="50" y="50" text-anchor="middle" dy="7" font-size="20">1%</text>
+  </svg>
+  <svg viewbox="0 0 100 100">
+    <circle cx="50" cy="50" r="45" fill="#FDB900"/>
+    <path fill="none" stroke-linecap="round" stroke-width="5" stroke="#fff"
+          stroke-dasharray="125.6,125.6"
+          d="M50 10
+             a 40 40 0 0 1 0 80
+             a 40 40 0 0 1 0 -80"/>
+    <text x="50" y="50" text-anchor="middle" dy="7" font-size="20">50%</text>
+  </svg>
+  <svg viewbox="0 0 100 100">
+    <circle cx="50" cy="50" r="45" fill="#FDB900"/>
+    <path fill="none" stroke-linecap="round" stroke-width="5" stroke="#fff"
+          stroke-dasharray="251.2,0"
+          d="M50 10
+             a 40 40 0 0 1 0 80
+             a 40 40 0 0 1 0 -80"/>
+    <text x="50" y="50" text-anchor="middle" dy="7" font-size="20">100%</text>
+  </svg>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+
+.tooltip{ 
+  position:relative;
+  float:right;
+}
+.tooltip > .tooltip-inner {background-color: #eebf3f; padding:5px 15px; color:rgb(23,44,66); font-weight:bold; font-size:13px;}
+.popOver + .tooltip > .tooltip-arrow {	border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 5px solid #eebf3f;}
+
+section{
+  margin:100px auto; 
+  height:1000px;
+}
+.progress{
+  border-radius:0;
+  overflow:visible;
+}
+.progress-bar{
+   background:rgb(23,44,60); 
+  -webkit-transition: width 1.5s ease-in-out;
+  transition: width 1.5s ease-in-out;
+}
+
+
+
+body{
+  background:#000000;
+}
+
+
+svg{width:30%;}
+
+
+
+
+</style>
+
+
+
+
+<script>
+$(function () { 
+  $('[data-toggle="tooltip"]').tooltip({trigger: 'manual'}).tooltip('show');
+});  
+
+// $( window ).scroll(function() {   
+ // if($( window ).scrollTop() > 10){  // scroll down abit and get the action   
+  $(".progress-bar").each(function(){
+    each_bar_width = $(this).attr('aria-valuenow');
+    $(this).width(each_bar_width + '%');
+  });
+       
+ //  }  
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<div class="set-size charts-container">
+  <div class="pie-wrapper progress-30">
+    <span class="label">30<span class="smaller">%</span></span>
+    <div class="pie">
+      <div class="left-side half-circle"></div>
+      <div class="right-side half-circle"></div>
+    </div>
+  </div>
+
+  <div class="pie-wrapper progress-60">
+    <span class="label">60<span class="smaller">%</span></span>
+    <div class="pie">
+      <div class="left-side half-circle"></div>
+      <div class="right-side half-circle"></div>
+    </div>
+  </div>
+
+  <div class="pie-wrapper progress-90">
+    <span class="label">90<span class="smaller">%</span></span>
+    <div class="pie">
+      <div class="left-side half-circle"></div>
+      <div class="right-side half-circle"></div>
+    </div>
+  </div>
+
+  <div class="pie-wrapper progress-45 style-2">
+    <span class="label">45<span class="smaller">%</span></span>
+    <div class="pie">
+      <div class="left-side half-circle"></div>
+      <div class="right-side half-circle"></div>
+    </div>
+    <div class="shadow"></div>
+  </div>
+
+  <div class="pie-wrapper progress-75 style-2">
+    <span class="label">75<span class="smaller">%</span></span>
+    <div class="pie">
+      <div class="left-side half-circle"></div>
+      <div class="right-side half-circle"></div>
+    </div>
+    <div class="shadow"></div>
+  </div>
+
+  <div class="pie-wrapper progress-95 style-2">
+    <span class="label">95<span class="smaller">%</span></span>
+    <div class="pie">
+      <div class="left-side half-circle"></div>
+      <div class="right-side half-circle"></div>
+    </div>
+    <div class="shadow"></div>
+  </div>
+  
+  <div class="pie-wrapper pie-wrapper--solid progress-65">
+    <span class="label">65<span class="smaller">%</span></span>
+  </div>
+  
+  <div class="pie-wrapper pie-wrapper--solid progress-25">
+    <span class="label">25<span class="smaller">%</span></span>
+  </div>
+  
+  <div class="pie-wrapper pie-wrapper--solid progress-88">
+    <span class="label">88<span class="smaller">%</span></span>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<style>
+
+@import url(https://fonts.googleapis.com/css?family=Lato:700);
+
+// -- vars
+$bg-color: #34495e;
+$default-size: 1em;
+$label-font-size: $default-size / 4;
+$label-font-size-redo: $default-size * 4;
+
+// -- mixins
+@mixin size($width, $height) {
+  height: $height;
+  width: $width;
+}
+
+@mixin draw-progress($progress, $color) {
+  .pie {
+    .half-circle {
+      border-color: $color;
+    }
+
+    .left-side {
+      transform: rotate($progress * 3.6deg);
+    }
+
+    @if $progress <= 50 {
+      .right-side {
+        display: none;
+      }
+    } @else {
+      clip: rect(auto, auto, auto, auto);
+
+      .right-side {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+@mixin draw-progress--solid($progress, $color, $bg-color) {
+  background: linear-gradient(to right, $color 50%, $bg-color 50%);
+  
+  &:before {
+    @if $progress <= 50 {
+      background: $bg-color;
+      transform: rotate((100 - (50 - $progress)) / 100 * 360deg * -1);
+    } @else {
+      background: $color;
+      transform: rotate((100 - $progress) / 100 * 360deg);
+    }
+  }
+}
+
+// -- selectors
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: #ecf0f1;
+  color: #444;
+  font-family: 'Lato', Tahoma, Geneva, sans-serif;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.set-size {
+  font-size: 10em;
+}
+
+.charts-container {
+  &:after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+
+.pie-wrapper {
+  @include size($default-size, $default-size);
+  float: left;
+  margin: 15px;
+  position: relative;
+  
+  &:nth-child(3n + 1) {
+    clear: both;
+  }
+
+  .pie {
+    @include size(100%, 100%);
+    clip: rect(0, $default-size, $default-size, $default-size / 2);
+    left: 0;
+    position: absolute;
+    top: 0;
+
+    .half-circle {
+      @include size(100%, 100%);
+      border: ($default-size / 10) solid #3498db;
+      border-radius: 50%;
+      clip: rect(0, $default-size / 2, $default-size, 0);
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  .label {
+    background: $bg-color;
+    border-radius: 50%;
+    bottom: $label-font-size-redo / 10;
+    color: #ecf0f1;
+    cursor: default;
+    display: block;
+    font-size: $label-font-size;
+    left: $label-font-size-redo / 10;
+    line-height: $label-font-size-redo * .70;
+    position: absolute;
+    right: $label-font-size-redo / 10;
+    text-align: center;
+    top: $label-font-size-redo / 10;
+
+    .smaller {
+      color: #bdc3c7;
+      font-size: .45em;
+      padding-bottom: 20px;
+      vertical-align: super;
+    }
+  }
+
+  .shadow {
+    @include size(100%, 100%);
+    border: $default-size / 10 solid #bdc3c7;
+    border-radius: 50%;
+  }
+
+  &.style-2 {
+    .label {
+      background: none;
+      color: #7f8c8d;
+
+      .smaller {
+        color: #bdc3c7;
+      }
+    }
+  }
+
+  &.progress-30 {
+    @include draw-progress(30, #3498db);
+  }
+
+  &.progress-60 {
+    @include draw-progress(60, #9b59b6);
+  }
+
+  &.progress-90 {
+    @include draw-progress(90, #e67e22);
+  }
+
+  &.progress-45 {
+    @include draw-progress(45, #1abc9c);
+  }
+
+  &.progress-75 {
+    @include draw-progress(75, #8e44ad);
+  }
+
+  &.progress-95 {
+    @include draw-progress(95, #e74c3c);
+  }
+}
+
+.pie-wrapper--solid {
+  border-radius: 50%;
+  overflow: hidden;
+
+  &:before {
+    border-radius: 0 100% 100% 0 / 50%;
+    content: '';
+    display: block;
+    height: 100%;
+    margin-left: 50%;
+    transform-origin: left;
+  }
+  
+  .label {
+    background: transparent;
+  }
+  
+  &.progress-65 {
+    @include draw-progress--solid(65, #e67e22, $bg-color);
+  }
+  
+  &.progress-25 {
+    @include draw-progress--solid(25, #9b59b6, $bg-color);
+  }
+  
+  &.progress-88 {
+    @include draw-progress--solid(88, #3498db, $bg-color);
+  }
+}
+
+
+</style> -->
+
+
+
+
+
+
+
+
+
+
+
+</html>

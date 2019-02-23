@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<!-- For IE -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<!-- For Resposive Device -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Notices</title>
+
+		
+
+
+
+
+
+	<body>
+		<div class="main-page-wrapper">
+
+
+
+		
+
+
+            <div class="theme-title">
+                <h2 align="center">Table view for data</h2>
+                <p>This page is dedicated to notice related to new announcement.Here you will find all updates related to our college.</p>
+            <hr>
+        
+
+
+
+            </div> <!-- /.theme-title -->
+	<style>
+		
+
+
+
+
+/* RESPONSIVE EXAMPLE */
+
+
+@media (max-width: 600px) {
+  .responsivetable { overflow-x: scroll;
+  position: relative;
+  margin-left:-53%;
+	  transform:scale(0.50); }
+  
+}
+@media (min-width: 600px) and (max-width : 850px){
+  .responsivetable { overflow-x: scroll;
+  position: relative;
+  margin-left:40%;
+	  transform:scale(0.80); }
+  
+}
+</style>
+<!--script for searching in table-->
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#TableInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#GbpecTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+ <div class="theme-title">
+<h2 align="center">Table Search</h2>
+<h2 align="center"> <input id = "TableInput" class="form-control input-lg" id="inputlg" type="text" placeholder = "Search in table.."><h2>
+
+
+
+
+</div>
+
+
+
+<!--This table idea  is similar to jackrugile codepen.and redesigned and responsive feature added by our team-->
+
+<table class="responsivetable">
+					<thead>
+					  <tr>
+						<th >DATE</th>
+						<th >TYPE</th>
+						<th>NOTICES</th>
+					  </tr>
+					</thead>
+					<tbody id = "GbpecTable">
+					  <tr>
+						<td><strong>22/09/10</strong></td>
+						<td class = "academics">academics</td>
+						<td>CSE time table</td>
+					  </tr>
+					  <tr>
+						<td><strong>22/09/2018</strong></td>
+						<td class = "Financial">Financial</td>
+						<td>SBI fee link</td>
+					  </tr>
+					  <tr>
+						<td><strong>23/08/2018</strong></td>
+						<td class = "Schlorship">Schlorship</td>
+						<td><a href="http://www.gbpec.edu.in/docs/NoticeAndUpdates/disable.pdf" class="tran3s active"><i class="fa fa-hand-o-right" aria-hidden="true"></i> Post-matric Scholarship for Students with Disabilities</a></td>
+					  </tr>
+					  <tr>
+						<td><strong>24/08/2018</strong></td>
+						<td class = "Schlorship">Scholarship</td>
+						<td><a href="http://www.gbpec.edu.in/docs/NoticeAndUpdates/MoMA_MCM_2018-20.pdf" class="tran3s"><i class="fa fa-hand-o-right" aria-hidden="true"></i> Notice-MERIT CUM MEANS BASED SCHOLARSHIP</a></td>
+					  </tr>					
+					  <tr>
+						<td><strong>24/08/2018</strong></td>
+						<td class = "Announcement">Announcement</td>
+						<td> <a href="http://www.gbpec.edu.in/docs/NoticeAndUpdates/Result.pdf" class="tran3s"><i class="fa fa-hand-o-right" aria-hidden="true"></i> Result For Walk-in-Interview held on Aug 27-28 2018</td>
+					  </tr>
+					  <tr>
+						<td><strong>24/08/2018</strong></td>
+						<td class = "Schlorship">Schlorship</td>						
+						<td><a href="http://www.gbpec.edu.in/docs/NoticeAndUpdates/PM.pdf" class="tran3s"><i class="fa fa-hand-o-right" aria-hidden="true"></i> PRIME MINISTER�S SCHOLARSHIP SCHEME for RPF</a></td>
+					  </tr>
+					  <tr>
+						<td><strong>25/08/2018</strong></td>
+						<td class = "time-table">time-table</td>
+						<td><a href="http://www.gbpec.edu.in/docs/NoticeAndUpdates/sessional%20exam-Intimation%20for%20backpaper.pdf" class="tran3s"><i class="fa fa-hand-o-right" aria-hidden="true"></i> Sessional Exam-Intimation for back paper</a></td>
+					  </tr>
+					  <tr>
+						<td><strong>24/05/2018</strong></td>
+						<td class = "event"> event</td>
+						<td>Inceptum</td>
+					  </tr>
+					  <tr>
+						<td><strong>24/06/2018</strong></td>
+						<td class =  "workshop">workshop</td>
+						<td>python workshop</td>
+					  </tr>
+					</tbody>
+				  </table>
+
+
+
+				  <style>
+				  body{
+
+background: black;
+}
+
+h2{
+color:white;
+
+}
+
+
+
+strong {
+	font-weight: bold; 
+}
+
+em {
+	font-style: italic; 
+}
+
+table {
+	background: #f5f5f5;
+	border-collapse: separate;
+	box-shadow: inset 0 1px 0 #fff;
+	font-size: 12px;
+	line-height: 24px;
+	margin: 30px auto;
+	text-align: left;
+	width: 800px;
+}	
+
+th {
+	background:  linear-gradient(90deg,rgb(231, 66, 37), rgb(243, 35, 35));
+	border-left: 1px solid #555;
+	border-right: 1px solid #777;
+	border-top: 1px solid #555;
+	border-bottom: 1px solid #333;
+	box-shadow: inset 0 1px 0 #999;
+	color: #fff;
+  font-weight: bold;
+	padding: 10px 15px;
+	position: relative;
+	text-shadow: 0 1px 0 #000;	
+	border-radius:3%;
+}
+
+th:after {
+	background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.08));
+	content: '';
+	display: block;
+	height: 25%;
+	left: 0;
+	margin: 1px 0 0 0;
+	position: absolute;
+	top: 25%;
+	width: 100%;
+}
+
+th:first-child {
+	border-left: 1px solid #777;	
+	box-shadow: inset 1px 1px 0 #999;
+}
+
+th:last-child {
+	box-shadow: inset -1px 1px 0 #999;
+}
+
+td {
+	border-right: 1px solid #fff;
+	border-left: 1px solid #e8e8e8;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #e8e8e8;
+	padding: 10px 15px;
+	position: relative;
+	transition: all 300ms;
+}
+
+td:first-child {
+	box-shadow: inset 1px 0 0 #fff;
+}	
+
+td:last-child {
+	border-right: 1px solid #e8e8e8;
+	box-shadow: inset -1px 0 0 #fff;
+}	
+
+tr:last-of-type td {
+	box-shadow: inset 0 -1px 0 #fff; 
+}
+
+tr:last-of-type td:first-child {
+	box-shadow: inset 1px -1px 0 #fff;
+}	
+
+tr:last-of-type td:last-child {
+	box-shadow: inset -1px -1px 0 #fff;
+}	
+
+tbody:hover td {
+	color: transparent;
+	text-shadow: 0 0 3px #aaa;
+}
+
+tbody:hover tr:hover td {
+	color: #444;
+	text-shadow: 0 1px 0 #fff;
+}
+				  
+				  
+				  </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- Js File_________________________________ -->
+
+		<!-- j Query -->
+		<script type="text/javascript" src="vendor/jquery.2.2.3.min.js"></script>
+
+		<!-- Bootstrap JS -->
+		<script type="text/javascript" src="vendor/bootstrap/bootstrap.min.js"></script>
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</body>
+</html>
